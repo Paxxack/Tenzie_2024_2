@@ -1,0 +1,82 @@
+h1 {
+  font-size: 45px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 26px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.App {
+  position: relative;
+  width: 560px;
+  height: 580px;
+  background-color: #0b2434;
+  text-align: center;
+}
+
+.board {
+  position: absolute;
+  height: 80%;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.content {
+  position: absolute;
+  height: 82%;
+  width: 82%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.diceIdle {
+  border: none;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  margin: 10px 10px;
+  font-size: 35px;
+}
+
+.diceClicked {
+  border: none;
+  height: 60px;
+  width: 60px;
+  background-color: #59e391;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  margin: 10px 10px;
+  font-size: 35px;
+}
+
+.roll-btn {
+  background-color: #5035ff;
+  height: 65px;
+  width: 160px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 26px;
+  margin-top: 25px;
+}
+
+.dice-container {
+  display: flex;
+  flex-wrap: wrap;
+}
