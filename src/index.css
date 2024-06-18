@@ -1,12 +1,22 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
 h1 {
-  font-size: 45px;
+  font-size: 4.6rem;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 1.5rem;
 }
 
 p {
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
   margin-top: 0;
 }
 
@@ -15,68 +25,96 @@ button:active {
 }
 
 .App {
-  position: relative;
-  width: 560px;
-  height: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
   background-color: #0b2434;
   text-align: center;
 }
 
 .board {
-  position: absolute;
-  height: 80%;
-  width: 85%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 560px;
   background-color: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .content {
-  position: absolute;
-  height: 82%;
-  width: 82%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diceIdle,
+.diceClicked {
+  border: none;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .diceIdle {
-  border: none;
-  height: 60px;
-  width: 60px;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
-  margin: 10px 10px;
-  font-size: 35px;
 }
 
 .diceClicked {
-  border: none;
-  height: 60px;
-  width: 60px;
   background-color: #59e391;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
-  margin: 10px 10px;
-  font-size: 35px;
 }
 
 .roll-btn {
   background-color: #5035ff;
-  height: 65px;
-  width: 160px;
+  height: 6.5rem;
+  width: 16rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   color: white;
-  font-size: 26px;
-  margin-top: 25px;
+  font-size: 2.6rem;
+  margin-top: 2.5rem;
+  cursor: pointer;
 }
 
 .dice-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 85ch;
+}
+
+.instructions {
+  max-width: 85ch;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .diceIdle,
+  .diceClicked {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+  }
+
+  .roll-btn {
+    height: 5.5rem;
+    width: 14rem;
+    font-size: 2.2rem;
+  }
 }
