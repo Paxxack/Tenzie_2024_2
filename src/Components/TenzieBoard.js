@@ -70,6 +70,7 @@ export default function TenzieBoard() {
       />
     );
   });
+
   useEffect(() => {
     initialiseGame();
   }, []);
@@ -80,10 +81,12 @@ export default function TenzieBoard() {
       <div className="board">
         <div className="content">
           <h1>Tenzies</h1>
-          <p>
-            Roll until all dice are the same. Click each die to freeze it at its
-            current value between rolls
-          </p>
+          <div className="instructions">
+            <p>
+              Roll until all dice are the same. Click each die to freeze it at
+              its current value between rolls
+            </p>
+          </div>
           <div className="dice-container">{diceHtml}</div>
           <button className="roll-btn" onClick={handleRoll}>
             {isGameEnded ? "Restart" : "Roll"}
